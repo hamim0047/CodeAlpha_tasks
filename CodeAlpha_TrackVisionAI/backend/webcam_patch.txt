@@ -1,0 +1,51 @@
+# Replace the start_webcam method inside VisionEngine with this version.
+
+def _open_camera(self, index: int):
+    attempts = []
+
+    if hasattr(cv2, "CAP_AVFOUNDATION"):
+        attempts.append(cv2.CAP_AVFOUNDATION)
+
+    attempts.append(cv2.CAP_ANY)
+
+    for backend in attempts:
+        cap = cv2.VideoCapture(index, backend)
+
+        if cap.isOpened():
+            ok, frame = cap.read()
+
+            if ok and frame is not None:
+                return cap
+
+        cap.release()
+
+    return None
+
+
+def start_webcam(self, index: int = 0) -> bool:
+    with self.lock:
+        self.stop()
+
+        # Try requested camera first, then other common indexes.
+        indexes = [index] + [i for i in range(5) if i != index]
+
+        for camera_index in indexes:
+            capture = self._open_camera(camera_index)
+
+            if capture is None:
+                continue
+
+            capture.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+            capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+
+            self.capture = capture
+            self.source_type = "webcam"
+            self.source_path = str(camera_index)
+            self.running = True
+            self.tracker.reset()
+
+            print(f"Webcam opened successfully at index {camera_index}")
+            return True
+
+        print("Could not open camera indexes 0-4")
+        return False
