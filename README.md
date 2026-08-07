@@ -1,21 +1,23 @@
 # CodeAlpha Tasks
 
-This repository contains the projects completed as part of my **CodeAlpha internship/tasks**. Each task is organized in a separate folder and demonstrates a different area of software development, artificial intelligence, natural language processing, deep learning, and computer vision.
+This repository contains the projects completed as part of my **CodeAlpha internship/tasks**. Each task is organized in a separate folder and focuses on a different area of software development and artificial intelligence.
 
-## Projects Overview
+## Projects
 
-| Task | Project | Main Technologies | Description |
+| Task | Project Folder | Main Technologies | Description |
 |---|---|---|---|
-| Task 1 | Language Translation Tool | ReactJS, Tailwind CSS, Translation API | A responsive translation application for translating text between multiple languages. |
-| Task 2 | FAQ Chatbot | ReactJS, Flask, NLTK, Scikit-learn, TF-IDF, Cosine Similarity | A retrieval-based chatbot that finds the most relevant FAQ answer from an original dataset. |
-| Task 3 | HarmonIQ / Neural Melody Studio | ReactJS, Flask, PyTorch, LSTM, music21, Tone.js | A deep-learning music generation system trained on MIDI data. |
-| Task 4 | TrackVision AI | ReactJS, Flask, OpenCV, YOLO, SORT | A real-time object detection and multi-object tracking system for webcam and video input. |
+| Task 1 | [CodeAlpha_Translator](./CodeAlpha_Translator/) | ReactJS, Tailwind CSS, Translation API | A responsive language translation application. |
+| Task 2 | [CodeAlpha_FAQChatbot](./CodeAlpha_FAQChatbot/) | ReactJS, Flask, NLTK, TF-IDF, Cosine Similarity | An NLP-based FAQ chatbot using an original FAQ dataset. |
+| Task 3 | [CodeAlpha_MelodyStudio](./CodeAlpha_MelodyStudio/) | ReactJS, Flask, PyTorch, LSTM, music21, Tone.js | An AI music generation system trained on MIDI data. |
+| Task 4 | [CodeAlpha_TrackVisionAI](./CodeAlpha_TrackVisionAI/) | ReactJS, Flask, OpenCV, YOLO, SORT | A real-time object detection and tracking application. |
 
 ---
 
-## Task 1 — Language Translation Tool
+## Task 1 — Translator
 
-A modern translation application that allows users to translate text between different languages through a clean and responsive interface.
+📁 **Folder:** [CodeAlpha_Translator](./CodeAlpha_Translator/)
+
+A modern language translation application that allows users to translate text between multiple languages through a responsive and user-friendly interface.
 
 ### Main Features
 
@@ -23,8 +25,8 @@ A modern translation application that allows users to translate text between dif
 - Text translation
 - Copy translated text
 - Text-to-speech support
-- Responsive interface
-- Modern glass-style UI
+- Responsive layout
+- Modern UI
 
 ### Technology Stack
 
@@ -36,14 +38,12 @@ Google Translation API
 Lucide React
 ```
 
-### Basic Flow
+### Flow
 
 ```text
 User Text
    ↓
-Select Source Language
-   ↓
-Select Target Language
+Select Languages
    ↓
 Translation Request
    ↓
@@ -54,18 +54,24 @@ Translated Text
 Display / Copy / Listen
 ```
 
+For setup and implementation details, open:
+
+👉 [CodeAlpha_Translator](./CodeAlpha_Translator/)
+
 ---
 
-## Task 2 — FAQ Chatbot using NLP
+## Task 2 — FAQ Chatbot
 
-A retrieval-based FAQ chatbot that uses classical NLP techniques to find the most relevant answer from an existing FAQ dataset.
+📁 **Folder:** [CodeAlpha_FAQChatbot](./CodeAlpha_FAQChatbot/)
+
+A retrieval-based FAQ chatbot that uses Natural Language Processing to find the most relevant answer from an existing FAQ dataset.
 
 The project uses the **Amazon Video Games Question/Answer dataset**.
 
 ### Main Features
 
 - Original FAQ dataset
-- NLTK text preprocessing
+- NLTK preprocessing
 - Stop-word removal
 - Lemmatization
 - TF-IDF vectorization
@@ -74,7 +80,7 @@ The project uses the **Amazon Video Games Question/Answer dataset**.
 - Low-confidence query rejection
 - Suggested FAQ questions
 - Similarity score display
-- Responsive React chatbot interface
+- Responsive chatbot interface
 
 ### Technology Stack
 
@@ -98,7 +104,7 @@ Lemmatization
 Stop-word Removal
 ```
 
-### Processing Flow
+### NLP Flow
 
 ```text
 User Question
@@ -116,9 +122,15 @@ Best FAQ Match
 Original Answer
 ```
 
+For setup and implementation details, open:
+
+👉 [CodeAlpha_FAQChatbot](./CodeAlpha_FAQChatbot/)
+
 ---
 
-## Task 3 — HarmonIQ / Neural Melody Studio
+## Task 3 — Melody Studio
+
+📁 **Folder:** [CodeAlpha_MelodyStudio](./CodeAlpha_MelodyStudio/)
 
 An AI-powered music generation project that learns musical patterns from MIDI files using a stacked LSTM neural network.
 
@@ -126,16 +138,18 @@ The project uses the **MAESTRO v3.0.0 MIDI dataset**.
 
 ### Main Features
 
-- Original MIDI dataset
+- MAESTRO MIDI dataset
 - MIDI preprocessing with music21
 - Note, chord, and rest tokenization
 - Vocabulary generation
 - Sequence preparation
 - PyTorch LSTM model
-- Temperature-based music generation
-- MIDI export
-- Sampled piano browser preview using Tone.js
-- Adjustable sequence length and temperature
+- Temperature-based generation
+- MIDI output
+- Tone.js sampled piano preview
+- Adjustable sequence length
+- Adjustable temperature
+- Download generated MIDI
 
 ### Technology Stack
 
@@ -181,13 +195,19 @@ Generated Music
 MIDI Output
 ```
 
+For setup and implementation details, open:
+
+👉 [CodeAlpha_MelodyStudio](./CodeAlpha_MelodyStudio/)
+
 ---
 
 ## Task 4 — TrackVision AI
 
+📁 **Folder:** [CodeAlpha_TrackVisionAI](./CodeAlpha_TrackVisionAI/)
+
 A real-time computer vision system that performs object detection and multi-object tracking from webcam or uploaded video.
 
-The project uses a pretrained **YOLO** model for detection and **SORT** for tracking.
+The project uses a pretrained **YOLO** model for object detection and **SORT** for tracking.
 
 ### Main Features
 
@@ -257,6 +277,10 @@ Annotated Video Stream
 React Dashboard
 ```
 
+For setup and implementation details, open:
+
+👉 [CodeAlpha_TrackVisionAI](./CodeAlpha_TrackVisionAI/)
+
 ---
 
 ## Repository Structure
@@ -264,28 +288,26 @@ React Dashboard
 ```text
 CodeAlpha_tasks/
 │
-├── Task 1 - Translation Tool/
+├── CodeAlpha_FAQChatbot/
 │   └── README.md
 │
-├── Task 2 - FAQ Chatbot/
+├── CodeAlpha_MelodyStudio/
 │   └── README.md
 │
-├── Task 3 - HarmonIQ/
+├── CodeAlpha_TrackVisionAI/
 │   └── README.md
 │
-├── Task 4 - TrackVision AI/
+├── CodeAlpha_Translator/
 │   └── README.md
 │
 └── README.md
 ```
 
-> Folder names may differ slightly in the repository. Each project folder contains its own source code and task-specific setup instructions.
-
 ---
 
 ## General Requirements
 
-Depending on the project, you may need:
+Depending on the task, the projects may require:
 
 ```text
 Node.js
@@ -295,32 +317,37 @@ pip
 Git
 ```
 
-Some projects also require:
+AI-related projects may also use:
 
 ```text
+Flask
 PyTorch
 OpenCV
 Ultralytics
 music21
+Tone.js
 NLTK
 Scikit-learn
-Flask
+SciPy
+FilterPy
 ```
 
 ---
 
-## Running a Project
+## Running the Projects
 
-Each project is independent. Open the required task folder and follow the README inside that folder.
+Each task is independent.
 
-For most React projects:
+Open the required folder and follow the project-specific README.
+
+### Typical React Setup
 
 ```bash
 npm install
 npm run dev
 ```
 
-For projects with a Python backend:
+### Typical Python Backend Setup
 
 ```bash
 cd backend
@@ -332,7 +359,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Then start the frontend from the project root:
+Then run the frontend from the task folder:
 
 ```bash
 npm install
@@ -351,7 +378,8 @@ This repository demonstrates practical experience with:
 - Python backend development
 - Flask
 - Natural Language Processing
-- TF-IDF and cosine similarity
+- TF-IDF
+- Cosine similarity
 - Deep learning
 - LSTM neural networks
 - MIDI processing
@@ -369,36 +397,29 @@ This repository demonstrates practical experience with:
 ## Datasets and Models
 
 ### FAQ Chatbot
+
 Uses the Amazon Question/Answer dataset, particularly the Video Games category.
 
-### AI Music Generation
+### Melody Studio
+
 Uses the MAESTRO v3.0.0 MIDI dataset.
 
-### Object Detection and Tracking
-Uses a pretrained Ultralytics YOLO model for general-purpose object detection.
+### TrackVision AI
 
-Please refer to the README inside each project folder for project-specific attribution and setup details.
+Uses a pretrained Ultralytics YOLO object detection model.
 
----
-
-## Notes
-
-- Each task is developed as an independent project.
-- Individual projects may require different Python package versions.
-- Python virtual environments are recommended for backend projects.
-- Large datasets, trained model files, generated files, and virtual environments may be excluded from Git using `.gitignore`.
-- API keys and private credentials should never be committed to the repository.
+See each task folder's README for detailed setup and attribution information.
 
 ---
 
 ## Project Status
 
-| Task | Status |
-|---|---|
-| Task 1 — Language Translation Tool | ✅ Completed |
-| Task 2 — FAQ Chatbot | ✅ Completed |
-| Task 3 — AI Music Generation | ✅ Completed |
-| Task 4 — Object Detection & Tracking | ✅ Completed |
+| Task | Project | Status |
+|---|---|---|
+| Task 1 | Translator | ✅ Completed |
+| Task 2 | FAQ Chatbot | ✅ Completed |
+| Task 3 | Melody Studio | ✅ Completed |
+| Task 4 | TrackVision AI | ✅ Completed |
 
 ---
 
